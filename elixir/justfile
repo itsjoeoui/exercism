@@ -1,0 +1,2 @@
+submit exercise:
+  cd {{exercise}} && mix test && exercism submit
