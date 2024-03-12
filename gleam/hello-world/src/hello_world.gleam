@@ -1,3 +1,9 @@
+import gleam/io
+
 pub fn hello() {
-  "Goodbye, Mars!"
+  "Hello, World!"
+}
+
+pub fn main() {
+  io.debug(hello())
 }
