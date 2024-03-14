@@ -1,2 +1,2 @@
 submit exercise:
-  cd {{exercise}} && mix test && exercism submit
+  cd {{exercise}} && mix test --include pending && exercism submit
