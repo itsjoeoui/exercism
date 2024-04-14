@@ -1,0 +1,2 @@
+submit exercise:
+  cd {{exercise}} && poetry run pytest && exercism submit
