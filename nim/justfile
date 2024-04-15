@@ -1,0 +1,3 @@
+submit exercise:
+  cd {{exercise}} && nim r test_{{replace(exercise, '-', '_')}}.nim && exercism submit
+
