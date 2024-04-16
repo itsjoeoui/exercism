@@ -1,0 +1,3 @@
+submit exercise:
+  cd {{exercise}} && zig test test_{{replace(exercise, '-', '_')}}.zig && exercism submit
+

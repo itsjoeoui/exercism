@@ -1,0 +1,2 @@
+submit exercise:
+  cd {{exercise}} && BATS_RUN_SKIPPED=true bats test-{{exercise}}.bats && exercism submit

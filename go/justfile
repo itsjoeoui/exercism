@@ -1,0 +1,2 @@
+submit exercise:
+  cd {{exercise}} && go test -v --bench . --benchmem && exercism submit

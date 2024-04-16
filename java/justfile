@@ -1,0 +1,3 @@
+submit exercise:
+  cd {{exercise}} && chmod +x ./gradlew && ./gradlew test && exercism submit
+
