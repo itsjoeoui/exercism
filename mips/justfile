@@ -1,3 +1,5 @@
 submit exercise:
   cd {{exercise}} && java -jar ../Mars4_5.jar nc runner.mips impl.mips && exercism submit
 
+mars:
+  java -jar Mars4_5.jar
