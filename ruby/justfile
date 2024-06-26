@@ -1,4 +1,2 @@
 submit exercise:
-  cd {{exercise}} && ruby {{replace(exercise, '-', '_')}}_test.rb && exercism submit
-
-
+  cd {{exercise}} && ruby -r minitest/pride {{replace(exercise, '-', '_')}}_test.rb && exercism submit
