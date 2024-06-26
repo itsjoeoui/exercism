@@ -1,0 +1,4 @@
+submit exercise:
+  cd {{exercise}} && ruby {{replace(exercise, '-', '_')}}_test.rb && exercism submit
+
+
