@@ -1,2 +1,10 @@
-submit exercise:
-  cd {{exercise}} && ruby -r minitest/pride {{replace(exercise, '-', '_')}}_test.rb && exercism submit
+submit exercise test="":
+  #!/usr/bin/env bash
+  set -euxo pipefail
+  cd {{exercise}}
+  if [ ! {{test}} ]; then
+    ruby -r minitest/pride {{replace(exercise, '-', '_')}}_test.rb
+  else
+    ruby -r minitest/pride {{test}}_test.rb
+  fi
+  exercism submit
