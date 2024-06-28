@@ -4,20 +4,20 @@ class AssemblyLine
   end
 
   def production_rate_per_hour
-    total = @speed * 221
-
-    if @speed <= 4
-      total
-    elsif @speed <= 8
-      total * 0.9
-    elsif @speed == 9
-      total * 0.8
-    else
-      total * 0.77
-    end
+    @speed * 221 * success_ratio
   end
 
   def working_items_per_minute
     (production_rate_per_hour / 60).to_i
+  end
+
+  def success_ratio
+    case @speed
+    when 1..4 then 1.0
+    when 5..8 then 0.9
+    when 9 then 0.8
+    when 10 then 0.77
+    else 0.0
+    end
   end
 end
