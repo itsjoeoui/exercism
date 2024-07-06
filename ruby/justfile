@@ -3,8 +3,8 @@ submit exercise test="":
   set -euxo pipefail
   cd {{exercise}}
   if [ ! {{test}} ]; then
-    ruby -r minitest/pride {{replace(exercise, '-', '_')}}_test.rb
+    ruby -I .. -r disable_skip -r minitest/pride {{replace(exercise, '-', '_')}}_test.rb
   else
-    ruby -r minitest/pride {{test}}_test.rb
+    ruby -I .. -r disable_skip -r minitest/pride {{test}}_test.rb
   fi
   exercism submit
