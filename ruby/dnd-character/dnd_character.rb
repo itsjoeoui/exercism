@@ -5,7 +5,7 @@
 # `ruby/dnd-character` directory.
 
 class DndCharacter
-  ATTRIBUTES = %w[strength dexterity constitution intelligence wisdom charisma]
+  ATTRIBUTES = %w[strength dexterity constitution intelligence wisdom charisma].freeze
   private_constant :ATTRIBUTES
 
   def self.modifier(num)

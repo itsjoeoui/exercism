@@ -1,9 +1,7 @@
-# Write your code for the 'Series' exercise in this file. Make the tests in
-# `series_test.rb` pass.
-#
-# To get started with TDD, see the `README.md` file in your
-# `ruby/series` directory.
+# frozen_string_literal: true
 
+# Given a string of digits, output all the contiguous substrings of
+# length `n` in that string in the order that they appear.
 class Series
   private
 
@@ -15,9 +13,9 @@ class Series
 
   public
 
-  def slices(n)
-    raise ArgumentError if n > series.length || n <= 0
+  def slices(length)
+    raise ArgumentError unless (1..series.length).cover?(length)
 
-    (0..series.length - n).map { |i| series[i, n] }
+    (0..series.length - length).map { |i| series[i, length] }
   end
 end
