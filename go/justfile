@@ -1,2 +1,5 @@
+setup:
+  go install github.com/rakyll/gotest@latest
+
 submit exercise:
-  cd {{exercise}} && go test -v --bench . --benchmem && exercism submit
+  cd {{exercise}} && gotest -v --bench . --benchmem && exercism submit
