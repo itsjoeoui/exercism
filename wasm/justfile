@@ -1,0 +1,3 @@
+submit exercise:
+  cd {{exercise}} && pnpm i && pnpm test && exercism submit
+
