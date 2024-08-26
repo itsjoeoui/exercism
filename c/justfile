@@ -1,2 +1,0 @@
-submit exercise:
-  cd {{exercise}} && make test && exercism submit
