@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.1.1"
+pytest = ">=8.1.1,<10.0.0"
 pytest-cache = "^1.0"
 pytest-subtests = "^0.12.1"
 
